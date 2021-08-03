@@ -1,36 +1,15 @@
-var readlineSync=require('readline-sync');
-// var userName=readlineSync.question('What is your name?');
-// console.log('Welcome! ' + userName);
-
-var score=0;
-quesOne='Is my age older than 20';
-ansOne='yes';
-
-var userAge=readlineSync.question(quesOne);
-
-if(userAge === ansOne){
-  console.log('YOU ARE RIGHT');
-  score=score+1;
-  console.log('Score=',score);
-}
-else{
-  console.log('You are wrong');
-  score=score-1;
-  console.log('Score=',score)
+function add(num1,num2){
+  console.log('num1: ', num1, 'num2: ',num2);
+  sum=num1+num2;
+  return sum;
 }
 
-quesTwo='Is my surname Gupta';
-ansTwo='yes';
+console.log('sum=',add(5,5));
 
-var userAge=readlineSync.question(quesTwo);
+function prod(p1,p2){
+  console.log('p1=',p1,'p2= ',p2)
+  prod=p1+p2;
+  return prod;
+}
 
-if(userAge === ansTwo){
-  console.log('YOU ARE RIGHT');
-  score=score+1;
-  console.log('Score=',score);
-}
-else{
-  console.log('You are wrong');
-  score=score-1;
-  console.log('Score=',score)
-}
+console.log('prod=', prod(5,5));
