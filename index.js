@@ -1,15 +1,26 @@
-function add(num1,num2){
-  console.log('num1: ', num1, 'num2: ',num2);
-  sum=num1+num2;
-  return sum;
+var readlineSync=require('readline-sync');
+
+score=0;
+
+
+function quiz(question,answer){
+  var userAnswer=readlineSync.question(question);
+
+  if(userAnswer === answer ){
+  console.log('YOU ARE RIGHT');
+  score++;
+ 
+}
+else{
+  console.log('You are wrong');
+  score--;
+  
+}
 }
 
-console.log('sum=',add(5,5));
 
-function prod(p1,p2){
-  console.log('p1=',p1,'p2= ',p2)
-  prod=p1+p2;
-  return prod;
-}
+quiz('Is my name Muskan?','yes');
 
-console.log('prod=', prod(5,5));
+quiz('Am I less than 20 yrs old','no');
+
+console.log('score= ',score)
